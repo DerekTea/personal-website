@@ -35,6 +35,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: 0.05em;
+            white-space: nowrap;  /* prevents "Derek Tea" wrapping */
         }
 
         .nav-links {
@@ -57,6 +58,7 @@
                 -1px -1px 4px rgba(255, 255, 255, 0.08),
                 inset 0 1px 0 rgba(255, 255, 255, 0.12);
             transition: all 0.15s ease;
+            white-space: nowrap;  /* prevents button text wrapping */
         }
 
         .nav-links a:hover {
@@ -84,6 +86,8 @@
 
         .content img {
             display: block;
+            width: 450px;
+            height: 300px;
             margin-bottom: 1.5rem;
             border: 1px solid #ccc;
         }
@@ -102,6 +106,48 @@
             margin: 0.5rem 0 1rem 1.5rem;
             line-height: 1.8;
         }
+
+        /* ── Mobile styles ── */
+        @media (max-width: 500px) {
+
+            nav {
+                padding: 0 1rem;
+                gap: 0.5rem;
+            }
+
+            .nav-title {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 0.4rem;
+            }
+
+            .nav-links a {
+                padding: 0.3rem 0.65rem;
+                font-size: 0.78rem;
+            }
+
+            .content {
+                padding: 0 1rem;
+                margin: 1.25rem auto;
+            }
+
+            .content img {
+                width: 100%;     /* fills screen width */
+                height: auto;    /* keeps aspect ratio */
+            }
+
+            .content h3 {
+                font-size: 1rem;
+            }
+
+            .content p,
+            .content ul,
+            .content li {
+                font-size: 0.92rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,22 +161,22 @@
         </ul>
     </nav>
 
-<div class="content">
-    <img src="SsureDerek.JPG" width="450" height="300" alt="Derek Tea">
+    <div class="content">
+        <img src="SsureDerek.JPG" alt="Derek Tea">
 
-    <h3>About me</h3>
-    <p>
-        Hey there! My name is Derek and I'm a MSc candidate at the University of Toronto. I'm currently working on:
-    </p>
-    <ul>
-        <li>Graduate student @ Tsukahara Lab</li>
-        <li>Learning how to code</li>
-        <li>Freelance photography (<a href="https://www.instagram.com/derekdmt/?hl=en" target="_blank">@derekdmt</a>)</li>
-        <li>Personal blog</li>
-    </ul>
-    <i class="fa-solid fa-envelope"></i></b> derektea88@gmail.com</p>
-    <i class="fa-brands fa-instagram fa-xl" style="color: #E1306C;"></i></b> @_dertea</p> 
-    <i class="fa-brands fa-linkedin fa-xl" style="color:#0077B5"></i><a href="https://ca.linkedin.com/in/derek-tea" target="_blank"> Derek Tea</a></p>
+        <h3>About me</h3>
+        <p>
+            Hey there! My name is Derek and I'm a MSc candidate at the University of Toronto. I'm currently working on:
+        </p>
+        <ul>
+            <li>Graduate student @ Tsukahara Lab</li>
+            <li>Learning how to code</li>
+            <li>Freelance photography (<a href="https://www.instagram.com/derekdmt/?hl=en" target="_blank">@derekdmt</a>)</li>
+            <li>Personal blog</li>
+        </ul>
+        <i class="fa-solid fa-envelope"></i> derektea88@gmail.com</p>
+        <i class="fa-brands fa-instagram fa-xl" style="color: #E1306C;"></i> @_dertea</p>
+        <i class="fa-brands fa-linkedin fa-xl" style="color:#0077B5"></i><a href="https://ca.linkedin.com/in/derek-tea" target="_blank"> Derek Tea</a></p>
     </div>
 
 </body>
